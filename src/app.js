@@ -4,6 +4,7 @@
  * dari file controllers/UserController.js
  */
 // CODE HERE
+const UserController = require("../src/controllers");
 
 /**
  * Fungsi Main.

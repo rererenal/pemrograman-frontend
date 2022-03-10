@@ -4,8 +4,6 @@
  */
 // CODE HERE
 const users = require("../data/users");
-console.log(users);
-
 /**
  * SARAN TODO3 - TODO5.
  * Tulis dulu solusi tanpa penggunaan promise.
@@ -21,9 +19,21 @@ console.log(users);
  * - Gunakan promise untuk handle asynchronous.
  */
 const formatUser = (title) => {
-    const 
+    return new Promise ((resolve, reject)=> {
+        // setTimeout(() => {
+        //     resolve (users.map((user) => {
+        //         return {name : `${title} ${user.name}`, ...user};
+        //     }))
+        // },3000);
+        setTimeout(() => {
+            resolve (users.map((user) => {
+                return {name : `${title} ${user.name}`, age : user.age, major: user.major};
+            }))
+        },3000);
+    })
+    
+
 };
-formatUser();
 
 /**
  * TODO 4.
@@ -33,7 +43,13 @@ formatUser();
  * - Gunakan method find untuk mencari 1 user.
  * - Gunakan promise untuk handle asynchronous.
  */
-const findByName = (name) => {};
+const findByName = (name) => {
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            resolve(users.find((user)=> name == user.name));
+        },2000);
+    })
+};
 
 /**
  * SARAN TODO3 - TODO5.
@@ -49,10 +65,17 @@ const findByName = (name) => {};
  * - Gunakan method filter untuk mencari semua user.
  * - Gunakan promise untuk handle asynchronous.
  */
-const filterByMajor = (major) => {};
+const filterByMajor = (major) => {
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            resolve(users.filter((user)=> major == user.major));
+        },4000);
+    })
+};
 
 /**
  * TODO 6.
  * Export fungsi: formatUser, findByName, filterByMajor
  */
 // CODE HERE
+module.exports = {findByName, filterByMajor, formatUser};
