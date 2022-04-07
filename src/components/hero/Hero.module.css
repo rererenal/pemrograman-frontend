@@ -1,0 +1,57 @@
+/* Screen S */
+
+.container{
+    padding: 1rem;
+    text-align: center;
+    
+}
+
+.hero__title{
+    margin-bottom: 1rem;
+    color: #f72585;
+}
+
+.hero__genre{
+    margin-bottom: 1rem;
+    color: #f72585;
+}
+
+.hero__desc{
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.hero__button{
+    display: inline;
+    border-radius: 5px;
+    padding: 7px 21px;
+    color: white;
+    background-color: #f72585;
+    border: none;
+    margin: 1rem;
+}
+
+.hero__image{
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+/* Screen L */
+@media (min-width:992px) {
+    .container{
+        text-align: left;
+    }
+    .hero {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero__left{
+        flex-basis: 40%;
+    }
+    .hero__right{
+        flex-basis: 60%;
+    }
+}

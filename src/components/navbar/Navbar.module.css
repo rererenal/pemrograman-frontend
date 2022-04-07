@@ -1,0 +1,38 @@
+/* Screen S */
+.container {
+    background-color: #f72585;
+    padding: 1rem;
+    color: #ffffff;
+}
+
+.navbar__brand{
+    margin-bottom: 1rem;
+}
+
+.navbar__list{
+    list-style: none;
+}
+
+.navbar__item{
+    margin-bottom: 1rem;
+}
+
+/* Screen M */
+@media (min-width : 768px){
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navbar__brand{
+        margin-bottom: 0;
+    }
+    .navbar__list{
+        display: flex;
+        flex-direction: row;
+    }
+    .navbar__item{
+        margin: 0 1rem
+    }
+}
