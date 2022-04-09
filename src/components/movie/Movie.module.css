@@ -1,0 +1,39 @@
+.movie__title {
+    color: #f72585;
+    margin-bottom: 0.5rem;
+}
+.movie__date {
+    margin-bottom: 0.5rem;
+}
+.movie__image {
+    border-radius: 10px;
+    max-width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+/* Screen M */
+@media (min-width: 768px){
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .movie__container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .movie{
+        flex-basis: 50%;
+    }
+
+}
+/* Screen L */
+@media (min-width:992px){
+    .movie{
+        flex-basis: 25%;
+        padding: 1rem;
+    }
+    .container{
+        max-width: 100%;
+    }
+}
